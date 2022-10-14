@@ -18,7 +18,6 @@ function App() {
       .then(res => { setLinks(res) })
     return
   }, [])
-
   const handleLink = (e) => {
     e.preventDefault()
     setBtn(true)
@@ -50,10 +49,10 @@ function App() {
         {
           links && links.slice(0).reverse().map(el => {
             return <div key={el._id} className="conteinLinks">
-            <a href={`http://${el.link}`} target="_blank" rel="noopener noreferrer">{el.link}</a>
+            <a href={`http://${el.link}`} target="_blank">{el.link}</a>
             <div className='href'>
-            <a href={`${el.key}`}>{`${import.meta.env.VITE_FRONT_URL}/${el.key}`}</a>
-            <button value={`${import.meta.env.VITE_FRONT_URL}/${el.key}`} className="btn" onClick={(e) => handleCopy(e)}>COPY</button>
+            <a href={`${el.key}`} target="_blank">{`${import.meta.env.VITE_FRONT_URL}/${el.key}`}</a>
+            <button value={`${window.location.href}/${el.key}`} className="btn" onClick={(e) => handleCopy(e)}>COPY</button>
             </div>
             </div>
           })
