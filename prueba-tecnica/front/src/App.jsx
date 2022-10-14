@@ -52,7 +52,7 @@ function App() {
           {
             links && links.slice(0).reverse().map(el => {
               return <div key={el._id} className="conteinLinks">
-                <a href={`http://${el.link}`} target="_blank" className='href'>{el.link}</a>
+                <a href={`${el.link}`} target="_blank" className='href'>{el.link.length > 50 ? `${el.link.slice(0,50)}...` : el.link }</a>
                 <div className='href'>
                   <a href={`${el.key}`} target="_blank" className='href'>{`${import.meta.env.VITE_FRONT_URL}/${el.key}`}</a>
                   <button value={`${import.meta.env.VITE_FRONT_URL}/${el.key}`} className="btn" onClick={(e) => handleCopy(e)}>COPY</button>
