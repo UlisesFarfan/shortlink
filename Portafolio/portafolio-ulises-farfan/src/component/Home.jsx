@@ -1,8 +1,8 @@
 import './homeCss.css';
 import { Link } from "react-router-dom"
-import { FaArrowDown } from "react-icons/fa";
+import { FaArrowDown, FaArrowRight } from "react-icons/fa";
+import { AiOutlineMail } from "react-icons/ai";
 const Home = () => {
-
     return (
         <>
             <div id='contein'>
@@ -29,11 +29,9 @@ const Home = () => {
                     </div>
                     <div className='aboutEnd'>
                         <Link to="/proyectos">
-                            <button className='buttonEnd'>
-                                Proyects
-                            </button>
+                            <button className='buttonEnd'>Proyects<FaArrowRight/></button>
                         </Link>
-                        <button className='buttonEnd'>Contact me</button>
+                        <button className='buttonEnd'>Contact<AiOutlineMail/></button>
                     </div>
                 </div>
             </div>

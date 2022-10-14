@@ -33,7 +33,9 @@ const Proyectos = () => {
         behavior: 'smooth'
     });   
 }
-scrollTop()
+useEffect(()=>{
+  scrollTop()
+},[])
   return (
     <div className='p-conteiner'>
       <Link to="/">

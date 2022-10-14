@@ -36,7 +36,7 @@ justify-content: center;
     color: rgba(255, 252, 252, 0.985);
 }
 .homeButton:hover{
-    background-color: rgb(10, 93, 165);;
+    background-color: rgb(10, 93, 165);
 }
 
 
@@ -62,7 +62,16 @@ justify-content: center;
     justify-content: space-between;
 }
 .buttonEnd{
-    height: 3rem;
+    height: 5rem;
+    width: 10rem;
+    font-size: 2rem;
+    border: none;
+    border-radius: .5rem;
+    color: white;
+    background-color: rgba(10, 92, 165, 0.666);
+}
+.buttonEnd:hover{
+    background-color: rgb(10, 93, 165);
 }
 @media screen and (max-width: 750px) {
 .title{
@@ -84,6 +93,11 @@ justify-content: center;
 }
 .div-me{
     width: 100%;
+}
+.aboutEnd{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
 }
 }
 @media screen and (max-height: 500px){
