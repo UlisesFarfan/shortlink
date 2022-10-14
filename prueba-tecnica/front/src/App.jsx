@@ -41,26 +41,28 @@ function App() {
   }
   return (
     <div className="App">
-        <div className='conteinShort'>
-          <h1>shorten your link!</h1>
-          <form className='form'>
-            <input type="text" className='input' value={link} onChange={(e) => handleLink(e)} />
-            <button className='btn' disabled={btn} onClick={(e) => handleSubmit(e)}>Shorten</button>
-          </form>
-        </div>
-        <div className='links'>
-          {
-            links && links.slice(0).reverse().map(el => {
-              return <div key={el._id} className="conteinLinks">
-                <a href={`${el.link}`} target="_blank" className='href'>{el.link.length > 50 ? `${el.link.slice(0,50)}...` : el.link }</a>
-                <div className='href'>
-                  <a href={`${el.key}`} target="_blank" className='href'>{`${import.meta.env.VITE_FRONT_URL}/${el.key}`}</a>
-                  <button value={`${import.meta.env.VITE_FRONT_URL}/${el.key}`} className="btn" onClick={(e) => handleCopy(e)}>COPY</button>
-                </div>
+      <div className='conteinShort'>
+        <h1>shorten your link!</h1>
+        <form className='form'>
+          <input type="text" className='input' value={link} onChange={(e) => handleLink(e)} />
+          <button className='btn' disabled={btn} onClick={(e) => handleSubmit(e)}>Shorten</button>
+        </form>
+      </div>
+      <div className='links'>
+        {
+          links && links.slice(0).reverse().map(el => {
+            return <div key={el._id} className="conteinLinks">
+              <div className='href'>
+                <a href={`${el.link}`} target="_blank">{el.link}</a>
               </div>
-            })
-          }
-        </div>
+              <div className='href space'>
+                <a href={`${el.key}`} target="_blank">{`${import.meta.env.VITE_FRONT_URL}/${el.key}`}</a>
+                <button value={`${import.meta.env.VITE_FRONT_URL}/${el.key}`} className="btn" onClick={(e) => handleCopy(e)}>COPY</button>
+              </div>
+            </div>
+          })
+        }
+      </div>
     </div>
   )
 }
