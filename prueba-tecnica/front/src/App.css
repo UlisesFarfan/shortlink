@@ -22,6 +22,9 @@ h1{
   flex-wrap: wrap;
   margin-bottom: 1rem;
 }
+.input{
+  width: 20rem;
+}
 .contein {
   display: flex;
   justify-content: center;
@@ -90,7 +93,7 @@ h1{
   height: 100vh;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 550px) {
   .links {
     height: 70%;
     width: 99%;
