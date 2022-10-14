@@ -13,7 +13,7 @@ function App() {
 
   // get the above links
   useEffect(() => {
-    axios.get('http://localhost:3001/')
+    axios.get(import.meta.env.VITE_BACK_URL)
       .then(res => res.data)
       .then(res => { setLinks(res) })
     return
