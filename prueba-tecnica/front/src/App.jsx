@@ -52,7 +52,7 @@ function App() {
             return <div key={el._id} className="conteinLinks">
             <a href={`http://${el.link}`} target="_blank" rel="noopener noreferrer">{el.link}</a>
             <div className='href'>
-            <a href={`${import.meta.env.VITE_FRONT_URL}/${el.key}`}>{`${import.meta.env.VITE_FRONT_URL}/${el.key}`}</a>
+            <a href={`${el.key}`}>{`${import.meta.env.VITE_FRONT_URL}/${el.key}`}</a>
             <button value={`${import.meta.env.VITE_FRONT_URL}/${el.key}`} className="btn" onClick={(e) => handleCopy(e)}>COPY</button>
             </div>
             </div>
