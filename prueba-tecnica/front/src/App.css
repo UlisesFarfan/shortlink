@@ -20,6 +20,7 @@ h1{
   justify-content: center;
   width: 90%;
   flex-wrap: wrap;
+  margin-bottom: 1rem;
 }
 .contein {
   display: flex;
@@ -40,6 +41,7 @@ h1{
   border-radius: .25rem;
   background-color: #212121;
   align-items: center;
+  margin: 1rem;
   padding: 1rem;
   flex-wrap: wrap;
 }
@@ -82,7 +84,7 @@ h1{
 
 @media screen and (max-width: 750px) {
   .links {
-    height: 70%;
+    height: 50%;
     width: 99%;
     overflow-y: scroll;
   }
