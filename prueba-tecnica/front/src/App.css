@@ -82,6 +82,14 @@ h1{
   transform: translateY(0);
 }
 
+.Check{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
 @media screen and (max-width: 750px) {
   .links {
     height: 70%;
