@@ -14,13 +14,13 @@ function Check() {
     // depending on the response it redirects or sends an error
     if (redirenting) {
         return (
-            <div className="App">
+            <div className="Check">
                 <h1>redirecting...</h1>
             </div>
         )
     } else {
         return (
-            <div className="App">
+            <div className="Check">
                 <h1>Error, this link is invalid</h1>
             </div>
         )

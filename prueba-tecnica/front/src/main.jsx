@@ -15,9 +15,6 @@ const router = createBrowserRouter([
   {
     path: "/:key",
     element: <Check/>
-  },{
-    path: "*",
-    element: <Navigate to="/home" replace/>
   }
 ]);
 
