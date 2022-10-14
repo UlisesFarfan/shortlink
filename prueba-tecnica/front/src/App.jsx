@@ -34,6 +34,7 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     setBtn(true)
+    setLink("")
     let result = await axios.post(`${import.meta.env.VITE_BACK_URL}`, { link: link })
     setLinks([...links, result.data])
   }
