@@ -9,10 +9,6 @@ const schema = new Schema(
 	key: {
 		type: String,
 		require: true
-	},
-	views: {
-		type: Number,
-		require: true
 	}
 }
 );
