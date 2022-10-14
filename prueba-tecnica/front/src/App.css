@@ -2,10 +2,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   height: 100vh;
   width: 100vw;
 }
-
+.conteinShort{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 .form{
   display: flex;
   justify-content: center;
@@ -20,8 +26,8 @@
 }
 
 .links {
-  height: 35rem;
-  width: 100%;
+  height: 80%;
+  width: 70%;
   overflow-y: scroll;
 }
 
@@ -44,26 +50,16 @@
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: .25rem;
   box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
-  box-sizing: border-box;
   color: rgb(228, 228, 228);
   cursor: pointer;
   display: inline-flex;
-  font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1rem;
   font-weight: 600;
   justify-content: center;
-  line-height: 1.25;
   margin-left: 1rem;
   height: 2rem;
-  width: 100%;
-  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
-  text-decoration: none;
   transition: all 250ms;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
   vertical-align: baseline;
-  width: auto;
 }
 
 .btn:hover,
@@ -83,4 +79,7 @@
   box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
   color: rgba(0, 0, 0, 0.65);
   transform: translateY(0);
+}
+@media screen and (max-width: 750px) {
+  
 }

@@ -39,26 +39,26 @@ function App() {
   }
   return (
     <div className="App">
-      <div className='contein'>
-        <h1>shorten your link!</h1>
-        <form className='form'>
-        <input type="text" className='input' value={link} onChange={(e) => handleLink(e)} />
-        <button className='btn' disabled={btn} onClick={(e) => handleSubmit(e)}>Shorten</button>
-        </form>
-        <div className='links'>
-        {
-          links && links.slice(0).reverse().map(el => {
-            return <div key={el._id} className="conteinLinks">
-            <a href={`http://${el.link}`} target="_blank">{el.link}</a>
-            <div className='href'>
-            <a href={`${el.key}`} target="_blank">{`${import.meta.env.VITE_FRONT_URL}/${el.key}`}</a>
-            <button value={`${window.location.href}/${el.key}`} className="btn" onClick={(e) => handleCopy(e)}>COPY</button>
-            </div>
-            </div>
-          })
-        }
+        <div className='conteinShort'>
+          <h1>shorten your link!</h1>
+          <form className='form'>
+            <input type="text" className='input' value={link} onChange={(e) => handleLink(e)} />
+            <button className='btn' disabled={btn} onClick={(e) => handleSubmit(e)}>Shorten</button>
+          </form>
         </div>
-      </div>
+        <div className='links'>
+          {
+            links && links.slice(0).reverse().map(el => {
+              return <div key={el._id} className="conteinLinks">
+                <a href={`http://${el.link}`} target="_blank">{el.link}</a>
+                <div className='href'>
+                  <a href={`${el.key}`} target="_blank">{`${import.meta.env.VITE_FRONT_URL}/${el.key}`}</a>
+                  <button value={`${window.location.href}/${el.key}`} className="btn" onClick={(e) => handleCopy(e)}>COPY</button>
+                </div>
+              </div>
+            })
+          }
+        </div>
     </div>
   )
 }
