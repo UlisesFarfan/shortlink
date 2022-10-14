@@ -6,18 +6,22 @@
   height: 100vh;
   width: 100vw;
 }
-.conteinShort{
+
+.conteinShort {
   display: flex;
   width: 100%;
   flex-wrap: wrap;
   justify-content: center;
 }
-.form{
+
+.form {
   display: flex;
   justify-content: center;
-  width: 100%;
+  width: 90%;
   margin-top: 2rem;
+
 }
+
 .contein {
   display: flex;
   justify-content: center;
@@ -34,13 +38,11 @@
 .conteinLinks {
   display: flex;
   justify-content: space-between;
-  height: 5rem;
   margin: 1rem;
   border-radius: .25rem;
   background-color: #212121;
   align-items: center;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding: 1rem;
   flex-wrap: wrap;
 }
 
@@ -80,6 +82,15 @@
   color: rgba(0, 0, 0, 0.65);
   transform: translateY(0);
 }
+
 @media screen and (max-width: 750px) {
-  
+  .links {
+    height: 70%;
+    width: 99%;
+    overflow-y: scroll;
+  }
+  .btn{
+    width: 100%;
+    margin-left: 0;
+  }
 }
