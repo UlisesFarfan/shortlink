@@ -1,16 +1,12 @@
 import { useState, useEffect } from 'react';
 import copy from "copy-to-clipboard";
 import axios from "axios";
-import { useParams } from "react-router-dom";
 import './App.css';
 
 function App() {
   const [links, setLinks] = useState([])
   const [link, setLink] = useState("")
   const [btn, setBtn] = useState(true)
-  const { key } = useParams()
-  key ? axios.get(`/?webKey=${key}`).then(res => console.log(res.data)) : null
-
   // get the above links
   useEffect(() => {
     axios.get(import.meta.env.VITE_BACK_URL)
