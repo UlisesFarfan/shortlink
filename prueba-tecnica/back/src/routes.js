@@ -21,6 +21,8 @@ const urlGenerator = async () => {
 
 router.post("/", async (req, res) => {
     const link = req.body
+    console.log(link)
+    link.link.includes("https://") ? null : link.link = `https://${link.link}` 
     try {
         const verify = await ModelSchema.findOne(link)
 

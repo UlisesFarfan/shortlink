@@ -9,7 +9,7 @@ function Check() {
     // using the link key look up the link in the database
     axios.get(`/?webKey=${key}`)
         .then(res => res.data)
-        .then(res => location.href = res[0].link.includes("https://") ? res[0].link : `https://${res[0].link}`)
+        .then(res => location.href = res[0].link) 
         .catch(() => setRedirenting(false))
     // depending on the response it redirects or sends an error
     if (redirenting) {
