@@ -12,9 +12,11 @@
   flex-wrap: wrap;
   justify-content: center;
 }
-h1{
+
+h1 {
   padding: 1rem;
 }
+
 .form {
   display: flex;
   justify-content: center;
@@ -22,7 +24,8 @@ h1{
   flex-wrap: wrap;
   margin-bottom: 1rem;
 }
-.input{
+
+.input {
   width: 20rem;
 }
 
@@ -70,6 +73,7 @@ h1{
 .btn:hover {
   transform: translateY(-1px);
 }
+
 .btn:active {
   background-color: #F0F0F1;
   border-color: rgba(0, 0, 0, 0.15);
@@ -77,19 +81,32 @@ h1{
   color: rgba(0, 0, 0, 0.65);
   transform: translateY(0);
 }
-.href{
-  width: 50%;
-  overflow:hidden;
-  text-overflow: Ellipsis;
-  white-space: nowrap;
+
+.href {
+  display: flex;
+  width: 48%;
+  justify-content: space-between;
 }
 
-.space{
+.aContein {
   display: flex;
-  justify-content: end;
-  flex-wrap: wrap;
+  width: 90%;
 }
-.Check{
+
+.hContein {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+a{
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.Check {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -97,26 +114,38 @@ h1{
   height: 100vh;
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 750px) {
   .links {
     height: 70%;
     width: 99%;
     overflow-y: scroll;
   }
-  .btn{
+
+  .btn {
     width: 100%;
     margin-left: 0;
   }
-  .input{
+
+  .input {
     width: 100%;
     margin-bottom: 1rem;
     height: 2rem;
   }
-  .href{
+
+  .aContein{
+    flex-wrap: wrap;
+  }
+
+  .none{
+    display: none;
+  }
+
+  .href {
     width: 100%;
     margin-bottom: 1rem;
   }
-  .space{
+
+  .space {
     justify-content: initial;
   }
 }

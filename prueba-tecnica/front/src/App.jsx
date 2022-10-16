@@ -48,14 +48,21 @@ function App() {
         {
           links && links.slice(0).reverse().map(el => {
             return <div key={el._id} className="conteinLinks">
-              <div className='href'>
-                <a href={`${el.link}`} target="_blank">{el.link}</a>
-              </div>
-              <div className='href space'>
-                <a href={`${el.key}`} target="_blank">{`${import.meta.env.VITE_FRONT_URL}/${el.key}`}</a>
-                <button value={`${import.meta.env.VITE_FRONT_URL}/${el.key}`} className="btn" onClick={(e) => handleCopy(e)}>COPY</button>
-              </div>
-            </div>
+                      <div className='href'>
+                        <div className='hContein'>
+                          <a href={`${el.link}`} target="_blank">{el.link}</a>
+                        </div>
+                      </div>
+                      <div className='href'>
+                        <div className='none'></div>
+                        <div className='aContein'>
+                          <div className='hContein'>
+                            <a href={`${el.key}`} target="_blank">{`${import.meta.env.VITE_FRONT_URL}/${el.key}`}</a>
+                          </div>
+                          <button value={`${import.meta.env.VITE_FRONT_URL}/${el.key}`} className="btn" onClick={(e) => handleCopy(e)}>COPY</button>
+                        </div>
+                      </div>
+                    </div>
           })
         }
       </div>
