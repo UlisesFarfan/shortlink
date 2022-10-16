@@ -133,6 +133,7 @@ a{
   }
 
   .aContein{
+    width: 100%;
     flex-wrap: wrap;
   }
 
